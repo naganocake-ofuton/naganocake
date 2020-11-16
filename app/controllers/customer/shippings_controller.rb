@@ -6,6 +6,7 @@ class Customer::ShippingsController < ApplicationController
 
   def create
     @shipping = Shipping.new(shipping_params)
+    @shipping.save
   end
 
   def edit
