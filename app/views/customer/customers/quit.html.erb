@@ -1,0 +1,15 @@
+　<div class="quit">
+
+    <h1>本当に退会しますか？</h1>
+
+    <p>退会すると、会員登録情報や<br>
+    これまでの購入履歴が閲覧できなくなります。<br>
+    退会する場合は、「退会する」をクリックしてください。
+    </p>
+
+  <%= link_to "退会しない", customers_path, class: 'glyphicon glyphicon-home btn btn-primary' %>
+  <%= link_to "退会する", out_customers_path, method: :PATCH, data: {confirm: "本当に退会してもよろしいですか？"}, class: "glyphicon glyphicon-tint btn btn-danger" %>
+
+
+
+  </div>
