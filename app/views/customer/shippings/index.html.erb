@@ -5,7 +5,7 @@
   <div id="error">
 
   </div>
-  <%= form_with model:@shipping, local:true do |f| %>
+  <%= form_with model: @shipping, local: true do |f| %>
     <div class="shipping col-xs-10">
       <div class="form-group col-xs-12">
         <label class="col-xs-3">郵便番号（ハイフンなし）</label>
@@ -47,11 +47,11 @@
           </td>
           <td>
             <!--customerとネスト化した後のeditリンク先に変更する-->
-            <%= link_to "編集する", edit_shipping_path(shipping), class:"btn btn-primary" %>
+            <%= link_to "編集する", edit_customers_shipping_path(shipping), class:"btn btn-primary" %>
           </td>
           <td>
             <!--customerとネスト化した後のdestroyリンク先に設定する-->
-            <%= link_to "削除する", shipping_path(shipping), method: :delete, data: {confirm: "本当に削除しますか？"}, class:"btn btn-danger" %>
+            <%= link_to "削除する", customers_shipping_path(shipping), method: :delete, data: {confirm: "本当に削除しますか？"}, class:"btn btn-danger" %>
           </td>
         </tr>
       <% end %>
