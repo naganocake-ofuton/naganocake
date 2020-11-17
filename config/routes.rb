@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   end
 
   # customer
-  devise_for :customers
+  devise_for :customers, :controllers => {
+    :sessions => 'customers/sessions',
+    :registrations => 'customers/registrations',
+    :passwords => 'customers/passwords'
+   }
   scope module: :customer do
     # resourses :
   end
