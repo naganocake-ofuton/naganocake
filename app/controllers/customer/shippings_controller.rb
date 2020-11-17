@@ -7,6 +7,7 @@ class Customer::ShippingsController < ApplicationController
   def create
     @shipping = Shipping.new(shipping_params)
     @shipping.save
+    redirect_to request.referer
   end
 
   def edit
