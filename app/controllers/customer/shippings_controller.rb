@@ -1,13 +1,20 @@
 class Customer::ShippingsController < ApplicationController
   def index
     @shipping = Shipping.new
-    @shippings = Shipping.all
+    @shippings = current_customer.shipping
   end
 
   def create
     @shipping = Shipping.new(shipping_params)
-    @shipping.save
-    redirect_to request.referer
+    @shipping.customer_id = current_customer.id
+    if @shipping.save
+      flash[:notice] = 'You have created shipping address successfully'
+      redirect_to request.referer
+    else
+       @shipping = Shipping.new
+       @shippings = current_customer.shipping
+      render :index
+    end
   end
 
   def edit
