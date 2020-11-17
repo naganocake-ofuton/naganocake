@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Customers::SessionsController < Devise::SessionsController
+  
+    before_action :reject_customer, only: [:create]
+
+  protected
+
+  
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

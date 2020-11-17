@@ -12,10 +12,12 @@ Rails.application.routes.draw do
 
   # customer
    devise_for :customers, :controllers => {
+
     :sessions => 'customers/sessions',
     :registrations => 'customers/registrations',
     :passwords => 'customers/passwords'
    }
+
 
    get 'about' => 'customer/items#about'
    root 'customer/items#top'
@@ -45,6 +47,7 @@ Rails.application.routes.draw do
 
       resources :shippings,only: [:index,:create,:edit,:update,:destroy]
     end
+
   end
 
 
