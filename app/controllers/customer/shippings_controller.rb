@@ -1,7 +1,7 @@
 class Customer::ShippingsController < ApplicationController
   def index
     @shipping = Shipping.new
-    @shippings = current_customer.shipping
+    # @shippings = current_customer.shipping ←NoMethodErrorが出る
   end
 
   def create
