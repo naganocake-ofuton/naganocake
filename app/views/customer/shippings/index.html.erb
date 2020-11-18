@@ -5,7 +5,8 @@
   <div id="error">
 
   </div>
-  <%= form_with model: @shipping, local: true do |f| %>
+
+  <%= form_with model:@shipping, url:customers_shipping_path, local: true do |f| %>
     <div class="shipping col-xs-10">
       <div class="form-group col-xs-12">
         <label class="col-xs-3">郵便番号（ハイフンなし）</label>
