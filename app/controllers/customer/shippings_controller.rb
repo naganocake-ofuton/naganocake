@@ -1,7 +1,7 @@
 class Customer::ShippingsController < ApplicationController
   def index
     @shipping = Shipping.new
-    @shippings = current_customer.shipping
+    # @shippings = current_customer.shipping ←NoMethodErrorが出る
   end
 
   def create
@@ -18,15 +18,25 @@ class Customer::ShippingsController < ApplicationController
   end
 
   def edit
-
+    @shipping = Shipping.find(params[:id])
   end
 
   def update
-
+    @shipping = Shipping.find(params[:id])
+	  if @shipping.update(shipping_params)
+  	 flash[:success] = "配送先を変更しました"
+     redirect_to customers_shippings_path
+	  else
+	   render "edit"
+	  end
   end
 
   def destroy
-
+   @shipping = Shipping.find(params[:id])
+	  @shipping.destroy
+    @shippings = current_customer.shipping
+    flash.now[:alert] = "配送先を削除しました"
+	  # redirect_to customers_shipping_addresses_path
   end
 
   private
