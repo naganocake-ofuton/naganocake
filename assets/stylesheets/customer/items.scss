@@ -1,0 +1,141 @@
+// Place all the styles related to the customer::Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.toppage-head {
+	margin-bottom: 0;
+}
+.item-recommend {
+	position: relative;
+	float: left;
+	margin: 10px 15px 10px 15px;
+}
+.item-more {
+	position: absolute;
+	bottom: 5px;
+	right: 120px;
+}
+
+
+.item-headline {
+	margin-left: 10px;
+	margin-top: 40px;
+}
+.item-headline>span {
+	font-size: 18px;
+}
+.item-container {
+	float: left;
+	margin: 40px 15px 20px 15px;
+}
+.item-box {
+	text-align: center;
+}
+.items-name {
+	font-size: 17px;
+}
+/*ページネーション自体のデザイン*/
+.pagination>li>a {
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+
+.item-show {
+	margin-top: 100px;
+}
+.item-name {
+	margin-bottom: 20px;
+}
+.item-price {
+	margin-top : 40px;
+}
+.tax {
+	font-size: 15px;
+	margin-left: 5px;
+}
+.item-description {
+	margin-bottom: 50px;
+}
+.genre_id {
+  width: 70px;
+  height: 33px;
+}
+.welcome {
+  font-family: 'Chalkboard SE','Georgia','HoeflerText-Regular','Hoefler Text',sans-serif !important;
+  font-size: 33px;
+
+}
+.sample {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+ }
+
+.sample p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 30px;
+  margin:0;
+  color: black;
+  background: #FFE4E1;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px 15px;
+  font-family: 'Hannotate SC', 'Meiryo UI', 'Osaka', 'MS ゴシック', 'sans-serif' !important;
+ }
+
+.sample img {
+  width: 100%;
+ }
+
+ .about {
+  background-image: url(/assets/EzqccZdFg7LeNMj1570774941_1570774944.jpg);
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
+  background-size: cover;
+}
+
+.sample1 {
+  margin-top: 80px;
+  color: black;
+  font-size: 30px;
+  font-family: "arial black";
+  text-align: center;
+}
+
+.aaa img {
+  margin-top: 20%;
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  width:  180px;       /* ※縦横を同値に */
+  height: 180px;       /* ※縦横を同値に */
+  border: 9px solid white;
+}
+.items-name {
+  color: #0099FF !important;
+  font-weight: 2 !important;
+  font-family: 'Hannotate SC', 'Meiryo UI', 'Osaka', 'MS ゴシック', 'sans-serif' !important;
+}
+.soldout {
+  color: #FF3366 !important;
+}

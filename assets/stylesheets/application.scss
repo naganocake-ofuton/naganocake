@@ -1,0 +1,224 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+ @import "bootstrap";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+}
+select {
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 3px 60px 3px 10px;
+  text-align: left;
+
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* arrows */
+
+#product_is_sale, #product_genre_id, #cart_item_quantity,
+#order_shipping_address_id, #order_order_status,
+#order_detail_produciton_status {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 13px) calc(10px + 1px),
+    calc(100% - 8px) calc(10px + 1px),
+    calc(100% - 25px) 3px;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+#product_is_sale:focus, #product_genre_id:focus,
+#cart_item_quantity:focus, , #order_shipping_address_id:focus,
+#order_order_status:focus,#order_detail_produciton_status:focus {
+  background-image:
+    linear-gradient(45deg, skyblue 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, skyblue 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 8px) 10px,
+    calc(100% - 13px) 10px,
+    calc(100% - 25px) 3px;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: skyblue;
+  outline: 0;
+}
+
+
+.example {
+  position: relative;
+ }
+.example p {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  color: white;
+  background: skyblue;
+  font-size: 15px;
+  line-height: 1;
+  padding: 5px 10px;
+ }
+.example img {
+  width: 50%;
+  top: 50%;
+  left: 50%;
+ }
+ .head-line{
+  margin: 40px 0;
+ }
+
+ // header
+ header {
+   padding: 10px 20px 20px 20px;
+   border-bottom: 1px solid #CCFFFF;
+   background-color: #FFC7AF;
+   position: sticky;
+    top: 0;
+   z-index:9999;
+   width: 100%;
+ }
+ .header_btn:hover {
+   background-color: #FFCCCC !important;
+   color: #FF0066;
+   border-radius:30px;
+ }
+ .header-name {
+   padding-top: 17px;
+   padding-right: 10px;
+   font-weight: bold;
+   color: #444444;
+ }
+ .navbar-right .dropdown-menu {
+    right: 0;
+    left: 0;
+}
+.title {
+  font-size: 30px;
+}
+.title_h2 {
+  width: 450px;
+}
+a {
+  color: #444444;
+}
+
+.notice {
+  color: #5BFF7F;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.alert {
+  color: red;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+#error_explanation {
+  color: red;
+}
+
+#error_explanation ul li {
+  color: red;
+}
+
+ // footer
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #FFC7AF;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 20px;
+}
+ul.footer-menu li {
+display: inline;
+}
+
+.thanx {
+  padding-top: 100px;
+}
+.new-link {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+body {
+  background-color: #FFE4E1;
+}
+.table {
+  background-color: #FFFFFF;
+}
+
+#flash{
+  width: 30%;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.20);
+	padding: 7px;
+	font-weight:bold;
+	&.notice{
+		background-color:#dbffed;
+		color:#03622f;
+	}
+	&.success{
+		background-color:#dbedff;
+		color:#032f62;
+	}
+	&.danger{
+		background-color:#ffdbed;
+		color:#dd6262;
+	}
+}
