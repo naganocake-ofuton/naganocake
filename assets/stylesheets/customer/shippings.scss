@@ -1,0 +1,16 @@
+// Place all the styles related to the customer::Shippings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.shipping {
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.table > tbody > .shipping-tr > td {
+  line-height: 2px !important;
+  vertical-align: middle !important;
+}
+.shipping-back {
+  margin-top: 50px;
+}
